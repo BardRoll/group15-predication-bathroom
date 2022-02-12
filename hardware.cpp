@@ -49,8 +49,7 @@ void _post(){
       JSONPost["available"] = st[i];
 
       serializeJson(JSONPost, str);
-      int httpCode = http.POST(str);
-      Serial.printf("\nTry to send status room : %d\n",st[i]);
+      int httpCode = http.POST(str);      
     
       if(httpCode == HTTP_CODE_OK){
         String payload = http.getString();
